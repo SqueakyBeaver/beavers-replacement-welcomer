@@ -8,7 +8,7 @@ import json
 class Client(discord.Client):
     # * means repeat the character directly before
     # # means end there
-    # TODO: Eventually add support for multiple emotions 
+    # TODO: Eventually add support for multiple emotions
     # (not important since it would only apply to !)
     greetings = [
         "welcome*",
