@@ -1,0 +1,16 @@
+{
+    "bot": {
+        "token": "",
+        "random": {
+            "enabled": true,
+            "min": 1,
+            "max": 10
+        },
+        "fixed": 2
+    },
+    "server": {
+        "id": "<id of server>",
+        "watch_channel": "<id of channel to watch>",
+        "watch_user": "<id of user to watch for (i.e. theo)"
+    }
+}
