@@ -6,8 +6,14 @@ import json
 
 
 class Client(discord.Client):
+    # * means repeat the character directly before
+    # # means end there
+    # TODO: Eventually add support for multiple emotions 
+    # (not important since it would only apply to !)
     greetings = [
         "welcome*",
+        "welcome welcome",
+        "hello there#",
         "hai*",
         "hello*",
         "hi*hi*",
@@ -40,7 +46,8 @@ class Client(discord.Client):
 
     def gen_message(self) -> str:
         random.seed(time.time_ns())
-        ret = random.choice(self.greetings) + random.choice(self.emotions)
+        ret = random.choice(self.greetings)
+        ret += random.choice(self.emotions) if ret[-1] != "#" else ""
         ret = self.add_repititions(ret)
 
         return ret
